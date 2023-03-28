@@ -35,8 +35,9 @@ import ClockIcon from '@/icons/ClockIcon.vue';
 import { ref, onMounted } from 'vue';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
+import { capitalize } from '../services';
 
-dayjs.locale('ru');
+// dayjs.locale('ru');
 
 onMounted(() => {
   //console.log(dayjs)
@@ -54,9 +55,9 @@ const cDate =
   dayjs().format(' YYYY');
 let time = ref(dayjs().format('HH:mm'));
 
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
-}
+// function capitalize(str) {
+//   return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+// }
 </script>
 
 <style scoped></style>
