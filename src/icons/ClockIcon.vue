@@ -3,10 +3,11 @@
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
-    viewBox="0 0 3000 3000"
+    x="10px"
+    y="10px"
+    viewBox="0 0 1000 1000"
     xml:space="preserve"
+    width="15px" height="15px"
   >
     <g color="#7cb342">
       <path fill="currentcolor"

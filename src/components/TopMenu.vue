@@ -11,7 +11,6 @@
       Inventory
     </a>
     <div class="input-group w-25">
-      <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
       <input
         type="text"
         class="form-control"
@@ -20,29 +19,41 @@
         aria-describedby="basic-addon1"
       />
     </div>
-    <div>
-      <span>{{ today }}</span>
-      <span>{{ cDate }}<ClockIcon/></span>
+    <div class="">
+      <span class="d-block text-left">{{ today }}</span>
+      <span>
+        <span class="">{{ cDate }}</span>_
+        <ClockIcon />_
+        <span>{{ time }}</span>
+      </span>
     </div>
   </nav>
 </template>
 
 <script setup>
-import ClockIcon from '@/icons/ClockIcon.vue'
+import ClockIcon from '@/icons/ClockIcon.vue';
+import { onMounted } from 'vue';
+import dayjs from 'dayjs';
+import 'dayjs/locale/ru'; 
+
+dayjs.locale('ru'); 
+
+onMounted(() => {
+  //console.log(dayjs)
+});
 
 const currentDate = new Date();
-const weekday = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-const today = weekday[currentDate.getDay()];
-// const cDate = currentDate;
 
+const today = capitalize(dayjs(currentDate).format('dddd'));
+const cDate =
+  dayjs().format('DD ') +
+  capitalize(dayjs().format('MMM,')) +
+  dayjs().format(' YYYY');
+const time = dayjs().format('HH:mm');
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+}
 </script>
 
 <style scoped></style>
