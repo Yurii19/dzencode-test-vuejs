@@ -1,6 +1,7 @@
 <template>
   <TopMenu />
   <NavigationMenu />
+  <router-view></router-view>
 </template>
 
 <script>

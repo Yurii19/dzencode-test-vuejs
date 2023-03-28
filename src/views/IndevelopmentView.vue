@@ -9,7 +9,7 @@ onMounted(() => {
   //console.log(dayjs)
 });
 
-const menuItems = ['Orders', 'Groups', 'Products', 'Users', 'Settings'];
+//const menuItems = ['Orders', 'Groups', 'Products', 'Users', 'Settings'];
 </script>
 
 <style scoped></style>
