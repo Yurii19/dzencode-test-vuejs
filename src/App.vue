@@ -1,21 +1,17 @@
 <template>
   <TopMenu />
-  <img alt="Vue logo" src="./assets/logo.png">
-  <button type="button" class="btn btn-primary">Primary</button>
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-
+  <NavigationMenu />
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import TopMenu from './components/TopMenu.vue'
-//import HelloWorld from './components/TopMenu.vue'
+import NavigationMenu from './components/NavigationMenu.vue'
 
 export default {
   name: 'App',
   components: {
     TopMenu,
-    // HelloWorld,
+    NavigationMenu
   }
 }
 </script>
