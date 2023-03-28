@@ -1,7 +1,7 @@
 <template lang="html">
-  <ul class="nav flex-column text-left">
+  <ul class="nav flex-column text-left p-5">
     <li class="nav-item" v-for="item in menuItems" :key="item.name">
-      <a class="nav-link active" href="#"
+      <a class="nav-link active h5" href="#"
         ><router-link :to="item.linkTo">{{ item.name }}</router-link></a
       >
     </li>
@@ -25,4 +25,14 @@ const menuItems = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.router-link-active,
+.router-link-exact-active {
+  border-bottom: 3px solid green;
+}
+</style>

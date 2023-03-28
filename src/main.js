@@ -3,7 +3,7 @@ import App from './App.vue';
 import dayjs from 'dayjs';
 import { createRouter, createWebHistory } from 'vue-router';
 import OrdersView from './views/OrdersView.vue';
-import ProductsView from './views/ProductsView.vue';
+import GroupsView from './views/GroupsView.vue';
 import IndevelopmentView from './views/IndevelopmentView.vue';
 
 const app = createApp(App);
@@ -17,11 +17,11 @@ const router = createRouter({
     },
     {
       path: '/groups',
-      component: IndevelopmentView,
+      component: GroupsView,
     },
     {
       path: '/products',
-      component: ProductsView,
+      component: IndevelopmentView,
     },
     {
       path: '/users',

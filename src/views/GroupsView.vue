@@ -1,5 +1,5 @@
 <template lang="html">
-  <h2>The page under development</h2>
+  <h2>Groups</h2>
 </template>
 
 <script setup>

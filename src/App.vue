@@ -1,20 +1,23 @@
 <template>
   <TopMenu />
-  <NavigationMenu />
-  <router-view></router-view>
+  <div class="d-flex">
+    <NavigationMenu />
+    
+    <router-view class="flex-grow-1"></router-view>
+  </div>
 </template>
 
 <script>
-import TopMenu from './components/TopMenu.vue'
-import NavigationMenu from './components/NavigationMenu.vue'
+import TopMenu from './components/TopMenu.vue';
+import NavigationMenu from './components/NavigationMenu.vue';
 
 export default {
   name: 'App',
   components: {
     TopMenu,
-    NavigationMenu
-  }
-}
+    NavigationMenu,
+  },
+};
 </script>
 
 <style>

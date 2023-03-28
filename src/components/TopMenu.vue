@@ -22,8 +22,8 @@
     <div class="">
       <span class="d-block text-left">{{ today }}</span>
       <span>
-        <span class="">{{ cDate }}</span>_
-        <ClockIcon />_
+        <span class="">{{ cDate }}</span
+        >_ <ClockIcon />_
         <span>{{ time }}</span>
       </span>
     </div>
@@ -32,14 +32,17 @@
 
 <script setup>
 import ClockIcon from '@/icons/ClockIcon.vue';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import dayjs from 'dayjs';
-import 'dayjs/locale/ru'; 
+import 'dayjs/locale/ru';
 
-dayjs.locale('ru'); 
+dayjs.locale('ru');
 
 onMounted(() => {
   //console.log(dayjs)
+  setInterval(() => {
+    time.value = dayjs().format('HH:mm');
+  }, 30000);
 });
 
 const currentDate = new Date();
@@ -49,7 +52,7 @@ const cDate =
   dayjs().format('DD ') +
   capitalize(dayjs().format('MMM,')) +
   dayjs().format(' YYYY');
-const time = dayjs().format('HH:mm');
+let time = ref(dayjs().format('HH:mm'));
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();

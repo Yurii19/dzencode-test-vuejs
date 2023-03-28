@@ -1,15 +1,15 @@
 <template lang="html">
-  <h2>Orders</h2>
+  <div style="background-color: #dff9fb">
+    <h2>Orders</h2>
+    <OrdersComponent />
+  </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
+import OrdersComponent from '../components/OrdersComponent.vue';
 
-onMounted(() => {
-  //console.log(dayjs)
-});
-
-//const menuItems = ['Orders', 'Groups', 'Products', 'Users', 'Settings'];
+onMounted(() => {});
 </script>
 
 <style scoped></style>
